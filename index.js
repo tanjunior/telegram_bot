@@ -44,6 +44,6 @@ bot.command('/7trend', async (ctx) => {
 bot.launch({
     webhook: {
         domain: URL,
-        port: PORT
+        port: 8080
     }
 });
