@@ -1,6 +1,6 @@
 const PORT = process.env.PORT || 8080
 const URL = process.env.URL || ""
-const TOKEN = process.env.TOKEN || '5731397340:AAGgKqYu5Zgtt0ycOxoUIewAoN_EFzApqQU'
+const TOKEN = process.env.TOKEN || ''
 const axios = require('axios').default
 const { Telegraf } = require('telegraf');
 
@@ -44,6 +44,8 @@ bot.command('/7trend', async (ctx) => {
 bot.launch({
     webhook: {
         domain: URL,
-        port: 8080
+        port: PORT
     }
+}).then(() => {
+    console.log("Webhook bot listening on port", port)
 });
