@@ -5,7 +5,7 @@ const axios = require('axios').default
 const { Telegraf } = require('telegraf');
 
 const bot = new Telegraf(TOKEN);
-bot.telegram.setWebhook(`${URL}/bot${TOKEN}`)
+//bot.telegram.setWebhook(`${URL}/bot${TOKEN}`)
 
 
 bot.command('start', async (ctx) => {
@@ -40,8 +40,8 @@ bot.command('/7trend', async (ctx) => {
 })
 
 
-bot.startWebhook(`/bot${TOKEN}`, null, PORT)
+//bot.startWebhook(`/bot${TOKEN}`, null, PORT)
 
 //process.once("SIGINT", () => bot.stop("SIGINT"))
 //process.once("SIGTERM", () => bot.stop("SIGTERM"))
-//bot.launch();
+bot.launch();
